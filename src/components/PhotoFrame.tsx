@@ -6,6 +6,12 @@ export interface OwnProps {
   altText?   : string,
 }
 
+const wrapperStyle = {
+  border       : '2px solid #979797',
+  borderRadius : '5px',
+  padding      : '20px',
+}
+
 const PhotoFrame = (props: OwnProps) => {
 
   const { path, altText } = props
@@ -13,7 +19,7 @@ const PhotoFrame = (props: OwnProps) => {
   const alt = altText ? altText : ''
 
   return (
-    <div className={ 'image-wrap' }>
+    <div style={ wrapperStyle } className={ 'image-wrap' }>
       <img className={ 'image' } src={ path } alt={ alt } />
     </div>
   )
